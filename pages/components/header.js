@@ -23,7 +23,7 @@ const Header = () => {
                     <a href="https://www.google.ca" target="_blank">About</a>
                 </div>
                 <span onClick={clickHandler} >
-                    <i className="fa fa-bars"></i>
+                    
                 </span>
             </div> 
             <div className={isMobileModal ? Navbar.navbarmobile : Navbar.navbarmobileclosed} >
@@ -33,7 +33,7 @@ const Header = () => {
                 <a href="https://www.google.ca" target="_blank">Career</a>
                 <a href="https://www.google.ca" target="_blank">About</a>
                 <span onClick={clickHandler} >
-                    <i className="fa-solid fa-x"></i>
+
                 </span>
             </div> 
         </>
