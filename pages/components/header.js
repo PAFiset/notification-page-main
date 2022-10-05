@@ -1,6 +1,4 @@
 import Navbar from '../../styles/Header.module.scss';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
 
 
@@ -13,7 +11,7 @@ const Header = () => {
     };
 
     return ( 
-        <>
+        <>    
             <div className={Navbar.navbar} >
                 <div className={Navbar.navcontent}>
                     <p>snap</p>
@@ -22,9 +20,6 @@ const Header = () => {
                     <a href="https://www.google.ca" target="_blank">Career</a>
                     <a href="https://www.google.ca" target="_blank">About</a>
                 </div>
-                <span onClick={clickHandler} >
-                    
-                </span>
             </div> 
             <div className={isMobileModal ? Navbar.navbarmobile : Navbar.navbarmobileclosed} >
                 <p>-- snap --</p>
@@ -32,10 +27,12 @@ const Header = () => {
                 <a href="https://www.google.ca" target="_blank">Compagny</a>
                 <a href="https://www.google.ca" target="_blank">Career</a>
                 <a href="https://www.google.ca" target="_blank">About</a>
-                <span onClick={clickHandler} >
-
-                </span>
             </div> 
+            <span className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon :  Navbar.navicon} onClick={clickHandler} >
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </>
     );
 }
