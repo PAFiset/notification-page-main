@@ -13,7 +13,8 @@
             display: inline;
         }
 
-        a{
+        span{
+            cursor: pointer;
             padding-right:40px;
             padding-top: 7px;
         }
@@ -53,7 +54,7 @@
         font-style: italic;
     }
 
-    a{
+    span{
         padding:20px;
         font-size: 50px;
     }
