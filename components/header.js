@@ -5,52 +5,58 @@ import Link from 'next/link';
 
 const Header = () => {
 
-    const getWindowDimension = () =>{
-      const width = window.innerWidth;
-      return width;
-    };
+  const [isMobileModal,setMobileModal] = useState(false);
 
-    useEffect(() => {
-      function handleResize() {
-        getWindowDimension() < 700 ? "" : setMobileModal(false);
-      }
+  const getWindowDimension = () =>{
+    const width = window.innerWidth;
+    return width;
+  };
 
-      window.addEventListener('resize', handleResize);
-    }, []);
+  const clickHandler = () => {
+    setMobileModal(!isMobileModal);
+  };
 
-    const [isMobileModal,setMobileModal] = useState(false);
+  useEffect(() => {
+    const links = document.querySelectorAll(".links");
+    console.log({links});
+    
+    function handleResize() {
+      getWindowDimension() < 700 ? "" : setMobileModal(false);
+    }
 
-    const clickHandler = () => {
-        setMobileModal(!isMobileModal);
-    };
+    window.addEventListener('resize', handleResize);
+
+    links.forEach((link) => {
+      link.addEventListener("click",function () {
+        setMobileModal(false)
+      });
+    });
+
+    return() => {
+      window.removeEventListener("resize",handleResize);
+    }
+
+  }, []);
 
 
-
-    return ( 
-        <>    
-            <div className={Navbar.navbar} >
-                <div className={Navbar.navcontent}>
-                    <Link href="/"><p>snap</p></Link>
-                    <Link href="/usagers"><span>Usager</span></Link>
-                    <Link href="/createur"><span>Créateur</span></Link>
-                    <Link href="/projets"><span>Projets</span></Link>
-                    <Link href="/about"><span>About</span></Link>
-                </div>
-            </div> 
-            <div className={isMobileModal ? Navbar.navbarmobile : Navbar.navbarmobileclosed} >
-                <Link href="/"><span onClick={clickHandler} >Snap</span></Link>
-                <Link href="/usagers" ><span onClick={clickHandler} >Usager</span></Link>
-                <Link href="/createur" ><span onClick={clickHandler} >Créateur</span></Link>
-                <Link href="/projets" ><span onClick={clickHandler} >Projets</span></Link>
-                <Link href="/about" ><span onClick={clickHandler} >About</span></Link>
-            </div> 
-            <span className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon :  Navbar.navicon} onClick={clickHandler} >
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </>
-    );
+  return ( 
+    <>    
+      <nav className={Navbar.navbar} >
+          <div className={isMobileModal ? Navbar.navcontent : Navbar.navcontent + " " + Navbar.navbarmobileclosed}>
+              <Link href="/"><a className="links" >snap</a></Link>
+              <Link href="/usagers"><a className="links" >Usager</a></Link>
+              <Link href="/createur"><a className="links" >Créateur</a></Link>
+              <Link href="/projets"><a className="links" >Projets</a></Link>
+              <Link href="/about"><a className="links" >About</a></Link>
+          </div>
+      </nav> 
+      <button className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon : Navbar.navicon} onClick={clickHandler} >
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+    </>
+  );
 }
  
 export default Header;

@@ -6,69 +6,59 @@
     display: flex;
     align-items: center;
 
-    p{
+    a:nth-child(1){
       padding: 0 50px;
       font-size: 30px;
       font-weight: 700;
-      display: inline;
     }
 
-    span{
-      cursor: pointer;
+    a{
       padding-right:40px;
       padding-top: 7px;
     }
 
     @media (max-width: 700px) {
-      display: none;
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+
+      
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      color: white;
+
+      a:nth-child(1){
+        padding: 20px;
+        font-size: 50px;
+        margin: inherit;
+        font-style: italic;
+      }
+
+      a{
+        padding:20px;
+        font-size: 50px;
+      }
+
+      &.navbarmobileclosed{
+        display: none;
+      }
     }
 
   }
 
 }
 
-.navbarmobileclosed{
-  display: none;
-}
-
-.navbarmobile{
-
-  position: fixed;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 100%;
-
-  
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-
-
-  background-color: rgba($color: #000000, $alpha: 0.5);
-  color: white;
-
-  p{
-    cursor: pointer;
-    padding: 20px;
-    font-size: 50px;
-    margin: inherit;
-    font-style: italic;
-  }
-
-  span{
-    cursor: pointer;
-    padding:20px;
-    font-size: 50px;
-  }
-
-}
-
 .navicon{
+  display: none;
     
   width: 60px;
   height: 45px;
-  display: none;
   position: absolute;
   right: 40px;
   top: 40px;
