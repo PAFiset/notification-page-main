@@ -1,6 +1,6 @@
 const About = () => {
   return ( 
-    <div>
+    <div className="flex_container" >
       <h1>About</h1>
     </div>
    );

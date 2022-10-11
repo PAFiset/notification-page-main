@@ -1,18 +1,8 @@
-
-
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    .flex_container{
-        margin:35px;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-        height:800px;
-        width:800px;
-        background-color: white;
-        border-radius: 20px;
-    }
-
+.flex_content{
+  margin:35px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  height:800px;
+  width:800px;
+  background-color: white;
+  border-radius: 20px;
 }

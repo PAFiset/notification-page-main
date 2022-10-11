@@ -1,6 +1,6 @@
 const Usagers = () => {
   return ( 
-    <div>
+    <div className="flex_container" >
       <h1>*Sous Construction*</h1>
     </div>
    );
