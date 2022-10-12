@@ -40,14 +40,14 @@ const Header = () => {
 
 
   return ( 
-    <>    
+    <div className={Navbar.navigation} >    
       <nav className={Navbar.navbar} >
           <div className={isMobileModal ? Navbar.navcontent : Navbar.navcontent + " " + Navbar.navbarmobileclosed}>
               <Link href="/"><a className="links" >snap</a></Link>
-              <Link href="/usagers"><a className="links" >Usager</a></Link>
-              <Link href="/createur"><a className="links" >Créateur</a></Link>
-              <Link href="/projets"><a className="links" >Projets</a></Link>
-              <Link href="/about"><a className="links" >About</a></Link>
+              <Link href="/usagers"><a className="links">Usager</a></Link>
+              <Link href="/createur"><a className="links">Créateur</a></Link>
+              <Link href="/projets"><a className="links">Projets</a></Link>
+              <Link href="/about"><a className="links">About</a></Link>
           </div>
       </nav> 
       <button className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon : Navbar.navicon} onClick={clickHandler} >
@@ -55,7 +55,7 @@ const Header = () => {
           <span></span>
           <span></span>
       </button>
-    </>
+    </div>
   );
 }
  
