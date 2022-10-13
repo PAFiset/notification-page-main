@@ -42,12 +42,16 @@ const Header = () => {
   return ( 
     <div className={Navbar.navigation} >    
       <nav className={Navbar.navbar} >
+          <Link href="/"><a className="links" >snap</a></Link>
           <div className={isMobileModal ? Navbar.navcontent : Navbar.navcontent + " " + Navbar.navbarmobileclosed}>
-              <Link href="/"><a className="links" >snap</a></Link>
               <Link href="/usagers"><a className="links">Usager</a></Link>
               <Link href="/createur"><a className="links">Créateur</a></Link>
               <Link href="/projets"><a className="links">Projets</a></Link>
               <Link href="/about"><a className="links">About</a></Link>
+              <div className={Navbar.registration_section} >
+                <Link href="/"><a className="links">Login</a></Link>
+                <Link href="/"><a className={Navbar.register + " links" }>Register</a></Link>
+              </div>
           </div>
       </nav> 
       <button className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon : Navbar.navicon} onClick={clickHandler} >
