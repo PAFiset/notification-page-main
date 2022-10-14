@@ -7,32 +7,23 @@ import rizkyhasanuddinimage from "../media/avatar-rizky-hasanuddin.webp"
 import kimberlysmithimage from "../media/avatar-kimberly-smith.webp"
 import nathanpetersonimage from "../media/avatar-nathan-peterson.webp"
 import annakimimage from "../media/avatar-anna-kim.webp" 
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Home() {
 
-  const [newMessage,setNewMessageNum] = useState(0); 
+  const [newMessages,setNewMessageNum] = useState(3); 
   const [messageArray,setMessageArray] = useState([true,true,true,false,false,false,false]);
+
+  const clickHandler = () => {
+
+    setMessageArray([false,false,false,false,false,false,false]);
+    setNewMessageNum(0);
+  }
 
   
 
-  const clickHandler = () => {
-    var newMessageArray = messageArray;
-
-    newMessageArray.forEach((element,index) => {
-      newMessageArray[index] = false;
-    });
-
-    console.log(newMessageArray);
-
-    setMessageArray(newMessageArray);
-    
-  }
-
-
   return (
     <div>
-
       <main>
         <div className="flex_container" >
           <div className={styles.flex_content}>
@@ -41,7 +32,7 @@ export default function Home() {
                 Notification
               </div>
               <div className={styles.notification_number} >
-                3
+                {newMessages}
               </div>
               <div className={styles.mark_all_as_read} onClick={clickHandler} >
                 Mark all as read
