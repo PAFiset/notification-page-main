@@ -29,7 +29,7 @@ export default function Home() {
           <div className={styles.flex_content}>
             <div className={styles.notification_display}>
               <div className={styles.title} >
-                Notification
+                Notifications
               </div>
               <div className={styles.notification_number} >
                 {newMessages}

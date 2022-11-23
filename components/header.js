@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     const links = document.querySelectorAll(".links");
-    console.log({links});
+    console.log(` render +  ${links}`);
     
     function handleResize() {
       getWindowDimension() < 700 ? "" : setMobileModal(false);
@@ -28,6 +28,9 @@ const Header = () => {
 
     links.forEach((link) => {
       link.addEventListener("click",function () {
+
+        console.log(` render +  ${links}`);
+
         setMobileModal(false)
       });
     });
