@@ -1,12 +1,7 @@
 import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
-import markwebberimage from "../media/avatar-mark-webber.png"
-import angelagrayimage from "../media/avatar-angela-gray.webp"
-import jacobthompsonimage from "../media/avatar-jacob-thompson.webp"
-import rizkyhasanuddinimage from "../media/avatar-rizky-hasanuddin.webp"
-import kimberlysmithimage from "../media/avatar-kimberly-smith.webp"
-import nathanpetersonimage from "../media/avatar-nathan-peterson.webp"
-import annakimimage from "../media/avatar-anna-kim.webp" 
+
+
 import { useState } from 'react'
 
 export default function Home() {
@@ -40,7 +35,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[0] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={markwebberimage} alt="Mark webber" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-mark-webber.png" alt="Mark webber"   />
               </div>
               <div>
                 <div><b>Mark Webber</b> reacted to your recent post <b>My first tournament today!</b></div>
@@ -49,7 +44,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[1] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={angelagrayimage} alt="angela gray" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-angela-gray.webp" alt="angela gray"  />
               </div>
               <div>
                 <div><b>Angela Gray</b> followed you!</div>
@@ -58,7 +53,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[2] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={jacobthompsonimage} alt="jacob thompson" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-jacob-thompson.webp" alt="jacob thompson"  />
               </div>
               <div>
                 <div><b>Jacob thompson</b> has joined your group <b>Chess Club</b></div>
@@ -67,7 +62,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[3] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={rizkyhasanuddinimage} alt="rizky hasanuddin" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-rizky-hasanuddin.webp" alt="rizky hasanuddin"  />
               </div>
               <div>
                 <div><b>Rizky Hasanuddin</b> sent you a private message</div>
@@ -76,7 +71,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[4] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={kimberlysmithimage} alt="kimberly smith" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-kimberly-smith.webp" alt="kimberly smith"  />
               </div>
               <div>
                 <div><b>Kimberly Smith</b> Commented on your picture</div>
@@ -85,7 +80,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[5] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={nathanpetersonimage} alt="nathan peterson" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-nathan-peterson.webp" alt="nathan peterson"   />
               </div>
               <div>
                 <div><b>Nathan Peterson</b> reacted to your recent post <b>5 end-game strategies to increase your win rate</b></div>
@@ -94,7 +89,7 @@ export default function Home() {
             </div>
             <div className={ messageArray[6] ? styles.notification + " " + styles.unseen : styles.notification} >
               <div className={styles.profile_picture_frame}>
-                <Image className={styles.profile_picture}  src={angelagrayimage} alt="angela-gray" width="50px" height="50px"  />
+                <img className={styles.profile_picture}  src="./avatar-anna-kim.webp" alt="angela-gray"  />
               </div>
               <div>
                 <div><b>Anna Kim</b> left the group <b>Chest Club</b></div>
