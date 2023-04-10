@@ -1,4 +1,3 @@
-import Navbar from '../styles/Header.module.scss';
 import { useState , useEffect } from 'react';
 import Link from 'next/link';
 
@@ -28,9 +27,6 @@ const Header = () => {
 
     links.forEach((link) => {
       link.addEventListener("click",function () {
-
-        console.log(` render +  ${links}`);
-
         setMobileModal(false)
       });
     });
@@ -43,26 +39,26 @@ const Header = () => {
 
 
   return ( 
-    <div className={Navbar.navigation} >    
-      <nav className={Navbar.navbar} >
-          <Link href="/"><a className="links" >snap</a></Link>
-          <div className={isMobileModal ? Navbar.navcontent : Navbar.navcontent + " " + Navbar.navbarmobileclosed}>
-              <Link href="/usagers"><a className="links">Usager</a></Link>
-              <Link href="/createur"><a className="links">Créateur</a></Link>
-              <Link href="/projets"><a className="links">Projets</a></Link>
-              <Link href="/about"><a className="links">About</a></Link>
-              <div className={Navbar.registration_section} >
-                <Link href="/"><a className="links">Login</a></Link>
-                <Link href="/"><a className={Navbar.register + " links" }>Register</a></Link>
+    <header className="header" >    
+      <nav className="navbar" >
+          <Link href="/"><a className="home_link" >snap</a></Link>
+          <div className={isMobileModal ? "navcontent" : "navcontent" + " " + "navbarmobileclosed"}>
+              <Link href="/usagers"><a >Usager</a></Link>
+              <Link href="/createur"><a >Créateur</a></Link>
+              <Link href="/projets"><a >Projets</a></Link>
+              <Link href="/about"><a >About</a></Link>
+              <div className={"registration_section"} >
+                <Link href="/"><a >Login</a></Link>
+                <Link href="/"><a className="register">Register</a></Link>
               </div>
           </div>
       </nav> 
-      <button className={ isMobileModal ? Navbar.navicon_open + " " + Navbar.navicon : Navbar.navicon} onClick={clickHandler} >
+      <button className={ isMobileModal ? "navicon_open" + " " + "navicon" : "navicon"} onClick={clickHandler} >
           <span></span>
           <span></span>
           <span></span>
       </button>
-    </div>
+    </header>
   );
 }
  

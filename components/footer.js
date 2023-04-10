@@ -1,10 +1,8 @@
-import styles from '../styles/Footer.module.scss'
-
 const Footer = () => {
     return ( 
-        <div className={styles.signature} >
+        <footer className="signature" >
             <p>Site conçu et créer par Pierre-Alexandre ;)</p>
-        </div>
+        </footer>
     );
 }
  
